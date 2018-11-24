@@ -8,3 +8,6 @@ bash kafka-server-start.sh ../config/server.properties &
 
 bash kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic meutopico
 
+java -jar eureka-server-0.0.1-SNAPSHOT.jar
+
+bash mvnw clean install
