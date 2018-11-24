@@ -1,12 +1,18 @@
+bash bin/zookeeper-server-start.sh config/server.properties &
+
+bash kafka-server-start.sh ../config/server.properties &
+
 bash kafka-console-producer.sh --broker-list 10.3.6.26:9092 --topic meutopic
 
 bash kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic meutopico --from-beginning
 
 bash kafka-topics.sh --list -zookeeper localhost:2181 &
 
-bash kafka-server-start.sh ../config/server.properties &
 
-bash kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic meutopico
+
+
+
+
 
 java -jar eureka-server-0.0.1-SNAPSHOT.jar
 
