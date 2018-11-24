@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:8781}
+spring:
+  application:
+    name: ms-gatway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: ms-config-server
+        
